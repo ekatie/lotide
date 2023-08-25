@@ -1,4 +1,4 @@
-const eqArrays = function(arrayOne,arrayTwo) {
+const eqArrays = function(arrayOne, arrayTwo) {
   for (let i = 0; i < arrayOne.length; i++) {
     if (arrayOne[i] !== arrayTwo[i]) {
       return false;
@@ -9,10 +9,10 @@ const eqArrays = function(arrayOne,arrayTwo) {
   return true
 }
 
-const assertEqualArrays = function(inputArrayOne,inputArrayTwo) {
-  if (eqArrays(inputArrayOne,inputArrayTwo) === false) {
+const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
+  if (eqArrays(inputArrayOne, inputArrayTwo) === false) {
     console.log("The input arrays do not match.")
-  } else if (eqArrays(inputArrayOne,inputArrayTwo) === true) {
+  } else if (eqArrays(inputArrayOne, inputArrayTwo) === true) {
     console.log("The input arrays match.")
   }
 }
