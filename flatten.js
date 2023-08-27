@@ -17,18 +17,22 @@ const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
   }
 };
 
+// const flatten = function(inputArray) {
+//   let outputArray = [];
+
+//   for (let i = 0; i < inputArray.length; i++) {
+//     if (Array.isArray(inputArray[i]) === true) {
+//       outputArray.push(...inputArray[i]);
+//     }
+//     else if (Array.isArray(inputArray[i]) !== true) {
+//       outputArray.push(inputArray[i]);
+//     }
+//   }
+//   return outputArray;
+// };
+
 const flatten = function(inputArray) {
-  let outputArray = [];
+  return inputArray.flat();
+}
 
-  for (let i = 0; i < inputArray.length; i++) {
-    if (Array.isArray(inputArray[i]) === true) {
-      outputArray.push(...inputArray[i]);
-    }
-    else if (Array.isArray(inputArray[i]) !== true) {
-      outputArray.push(inputArray[i]);
-    }
-  }
-  return outputArray;
-};
-
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6])
+assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
