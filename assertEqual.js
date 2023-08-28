@@ -6,7 +6,7 @@ const assertEqual = function(actual,expected) {
   }
 };
 
-assertEqual(32,17);
-assertEqual(1,1);
-assertEqual("Lighthouse","Bootcamp");
-assertEqual("hey","hey");
+// assertEqual(32,17);
+// assertEqual(1,1);
+// assertEqual("Lighthouse","Bootcamp");
+// assertEqual("hey","hey");
