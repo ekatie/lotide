@@ -3,19 +3,19 @@ const eqArrays = function(arrayOne, arrayTwo) {
     if (arrayOne[i] !== arrayTwo[i]) {
       return false;
     } else {
-      continue
+      continue;
     }
   }
-  return true
-}
+  return true;
+};
 
 const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
   if (eqArrays(inputArrayOne, inputArrayTwo) === false) {
-    console.log("The input arrays do not match.")
+    console.log("The input arrays do not match.");
   } else if (eqArrays(inputArrayOne, inputArrayTwo) === true) {
-    console.log("The input arrays match.")
+    console.log("The input arrays match.");
   }
-}
+};
 
 // test arrays
 // let testArray1 = [1,"hi","5",7];
