@@ -6,16 +6,21 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+/**
+ * 
+ * @param {string} inputString - Sentence to count letters in
+ * @returns - Count of each letter the occurs in the string
+ */
 const countLetters = function(inputString) {
   let letterCount = {};
 
   for (const letter of inputString) {
-    if (letterCount[letter]) {
-      letterCount[letter] += 1;
-    } else {
-      letterCount[letter] = 1;
+    if (!letterCount[letter]) {
+      letterCount[letter] = 0;
     }
+    letterCount[letter] += 1;
   }
+
   return letterCount;
 };
 
