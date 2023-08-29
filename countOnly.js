@@ -6,19 +6,28 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+/**
+ * 
+ * @param {array} allItems - List of items
+ * @param {object} itemsToCount - Items to include in count
+ * @returns - Count of counted items
+ */
+
 const countOnly = function(allItems, itemsToCount) {
-  let itemCount = {};
+  const results = {};
 
   for (const item of allItems) {
-    if (itemsToCount[item]) {
-      if (!itemCount[item]) {
-        itemCount[item] = 1;
-      } else if (itemCount[item]) {
-        itemCount[item] += 1;
-      }
+    if (!itemsToCount[item]) {
+      continue;
     }
+
+    if (!results[item]) {
+      results[item] = 0;
+    }
+
+    results[item]++;
   }
-  return itemCount;
+  return results;
 };
 
 
