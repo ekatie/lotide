@@ -17,35 +17,35 @@ const eqArrays = function(arrayOne, arrayTwo) {
   return true;
 };
 
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+/**
+ * This function compares two objects and returns true if their keys and values are identical, or false if they are not.
+ * @param {object} object1 - First input object to compare
+ * @param {object} object2 - Second input object to compare
+ * @returns True or false based on whether the input objects are identical or not.
+ */
+
 const eqObjects = function(object1, object2) {
 
-  //if input objects are arrays, compare them and return true or false depending on whether they match or not
-  if (Array.isArray(object1) && Array.isArray(object2)) {
-    return eqArrays(object1, object2);
-  }
-
-  //if input objects are objects
-
+  // Check if both objects have the same number of keys
   if (Object.keys(object1).length === Object.keys(object2).length) {
-    for (let key of Object.keys(object1)) {
-      if (object1[key] !== object2[key]) {
+
+    // Compare key values for each object, both for arrays and not arrays
+    for (const key in object1) {
+
+      if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+        if (!eqArrays(object1[key], object2[key])) {
+          return false;
+        }
+      }
+      else if (object1[key] !== object2[key]) {
         return false;
       }
     }
     return true;
-  }
+  };
   return false;
 };
 
-// test primitive values
-// const shirtObject = {color: "red", size: "medium"};
-// const anotherShirtObject = {size: "medium", color: "red"};
-// assertEqual(eqObjects(shirtObject, anotherShirtObject), true); // => true
-
-// const longSleeveShirtObject = {size: "medium", color: "red", sleeveLength: "long"};
-// assertEqual(eqObjects(shirtObject, longSleeveShirtObject), false); // => false
 
 // test arrays
 // const multiColorShirtObject = {colors: ["red", "blue"], size: "medium"};
