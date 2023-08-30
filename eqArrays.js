@@ -1,4 +1,4 @@
-const assertEqual = function(actual,expected) {
+const assertEqual = function(actual, expected) {
   if (actual === expected) {
     console.log(`✅👍😁🥳 Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -6,21 +6,26 @@ const assertEqual = function(actual,expected) {
   }
 };
 
-// function that compares 2 arrays are returns true or false based on perfect match
+/**
+ * This function compares 2 arrays are returns true or false based on perfect match
+ * @param {array} arrayOne - First array, to be compared with second
+ * @param {array} arrayTwo -Second array, to be compared with first
+ * @returns - True if the arrays match, or False if they do not
+ */
 
-const eqArrays = function(arrayOne,arrayTwo) {
+const eqArrays = function(arrayOne, arrayTwo) {
   for (let i = 0; i < arrayOne.length; i++) {
     if (arrayOne[i] !== arrayTwo[i]) {
       return false;
     } else {
-      continue
+      continue;
     }
   }
-  return true
-}
+  return true;
+};
 
 // test cases
-assertEqual(eqArrays([1,2,3],[1,2,3]),true);
-assertEqual(eqArrays([1,2,3],[3,2,1]),false);
-assertEqual(eqArrays(["1","2","3"],["1","2","3"]),true);
-assertEqual(eqArrays(["1","2","3"],["1","2",3]),false);
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false);
