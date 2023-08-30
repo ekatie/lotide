@@ -11,6 +11,7 @@ const assertEqual = function(actual, expected) {
  * @param {array} string takes in a string to count
  * @returns {object} returns an object containing letter counts
  */
+
 const countLetters = function(string) {
   const letterCounts = {};
 
