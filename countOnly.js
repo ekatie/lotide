@@ -7,7 +7,7 @@ const assertEqual = function(actual, expected) {
 };
 
 /**
- * 
+ * This function taken in an array and an object, and returns a count of only the array values that occur in the object.
  * @param {array} allItems - List of items
  * @param {object} itemsToCount - Items to include in count
  * @returns - Count of counted items
