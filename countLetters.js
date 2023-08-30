@@ -7,22 +7,27 @@ const assertEqual = function(actual, expected) {
 };
 
 /**
- * 
- * @param {string} inputString - Sentence to count letters in
- * @returns - Count of each letter the occurs in the string
+ *This function should take in a sentence (as a string) and then return a count of each of the letters in that sentence.
+ * @param {array} string takes in a string to count
+ * @returns {object} returns an object containing letter counts
  */
-const countLetters = function(inputString) {
-  let letterCount = {};
+const countLetters = function(string) {
+  const letterCounts = {};
 
-  for (const letter of inputString) {
-    if (!letterCount[letter]) {
-      letterCount[letter] = 0;
+  for (const char of string) {
+    if (char !== " ") {
+      if (!letterCounts[char]) {
+        letterCounts[char] = 0;
+      }
+
+      letterCounts[char]++;
     }
-    letterCount[letter] += 1;
   }
 
-  return letterCount;
+  return letterCounts;
 };
+
+// console.log(countLetters("lighthouse in the house"));
 
 // test code
 // let string = "lighthouse in the house";
@@ -39,9 +44,9 @@ const countLetters = function(inputString) {
 //   n: 1,
 // };
 
-// let result = countLetters(string, {'l': 1, 'i': 2, 'h': 4, 'z': undefined});
+// let letterCount = countLetters(string, {'l': 1, 'i': 2, 'h': 4, 'z': undefined});
 
-// assertEqual(result['l'], 1);
-// assertEqual(result['i'], 2);
-// assertEqual(result['h'], 4);
-// assertEqual(result['z'], undefined);
+// assertEqual(letterCounts['l'], 1);
+// assertEqual(letterCounts['i'], 2);
+// assertEqual(letterCounts['h'], 4);
+// assertEqual(letterCounts['z'], undefined);
