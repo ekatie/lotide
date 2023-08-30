@@ -17,6 +17,19 @@ const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
   }
 };
 
+/**
+ * This function takes in an array and flattens (combines) any nested arrays, returning an array without nested arrays. Single array deep only.
+ * @param {array} inputArray 
+ * @returns A flattened version of the original array.
+ */
+
+const flatten = function(inputArray) {
+  return inputArray.flat();
+};
+
+// test
+// assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
+
 // const flatten = function(inputArray) {
 //   let outputArray = [];
 
@@ -30,9 +43,3 @@ const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
 //   }
 //   return outputArray;
 // };
-
-const flatten = function(inputArray) {
-  return inputArray.flat();
-}
-
-assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
