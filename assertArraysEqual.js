@@ -1,3 +1,10 @@
+/**
+ * This function takes in two arrays, compares their values and prints to the console to indicate whether they match or not.
+ * @param {array} arrayOne - First array to compare
+ * @param {array} arrayTwo - Second array to compare
+ * @returns Results of comparison - whether the arrays match or not.
+ */
+
 const eqArrays = function(arrayOne, arrayTwo) {
   for (let i = 0; i < arrayOne.length; i++) {
     if (arrayOne[i] !== arrayTwo[i]) {
