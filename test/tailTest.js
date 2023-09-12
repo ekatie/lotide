@@ -1,11 +1,23 @@
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
+const {expect} = require('chai');
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
+describe("#tail", () => {
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+  it("returns a new array with one less length than the original array", () => {
+    const words = ["Hello", "Lighthouse", "Labs"];
+    assert.deepEqual(tail(words).length, words.length - 1);
+  });
+
+  it("returns a new array without modifying the original array", () => {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    tail(words);
+    expect(words).to.have.lengthOf(3);
+  });
+
+  it("returns a new array with index 0 being the value of the previous arrays index 1 value", () => {
+    const words = ["Hello", "Lighthouse", "Labs"];
+    assert.deepEqual(tail(words)[0], words[1]);
+  });
+
+});
