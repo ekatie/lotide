@@ -1,21 +1,11 @@
-const eqArrays = function(arrayOne, arrayTwo) {
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    } else {
-      continue;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
-const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
-  if (eqArrays(inputArrayOne, inputArrayTwo) === false) {
-    console.log("The input arrays do not match.");
-  } else if (eqArrays(inputArrayOne, inputArrayTwo) === true) {
-    console.log("The input arrays match.");
-  }
-};
+/**
+ * This function takes in an array and returns it's middle value(s) - a single value if the length is odd, or two if the length is even.
+ * @param {array} inputArray - Input array.
+ * @returns The value of the middle index(es).
+ */
 
 const middle = function(inputArray) {
   let middleValues = [];
@@ -30,4 +20,4 @@ const middle = function(inputArray) {
   return middleValues;
 };
 
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]);
+module.exports = middle;
