@@ -1,10 +1,8 @@
-const assertEqual = function(actual,expected) {
-  if (actual === expected) {
-    console.log(`✅👍😁🥳 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌👎😢💩 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+/**
+ * This function takes an array and returns the value for index 0.
+ * @param {array} array - Input array
+ * @returns - Value of index 0 (first value) in array.
+ */
 
 const head = function(array) {
   if (array === "") {
@@ -14,6 +12,4 @@ const head = function(array) {
   }
 };
 
-// assertEqual(head([5,6,7]),5);
-// assertEqual(head(["Hello","Lighthouse","Labs"]),"Hello");
-// assertEqual(head([2]),5);
+module.exports = head;
