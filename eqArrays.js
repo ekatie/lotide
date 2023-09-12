@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅👍😁🥳 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌👎😢💩 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 /**
  * This function compares 2 arrays are returns true or false based on perfect match
  * @param {array} arrayOne - First array, to be compared with second
@@ -23,3 +15,5 @@ const eqArrays = function(arrayOne, arrayTwo) {
   }
   return true;
 };
+
+module.exports = eqArrays;
