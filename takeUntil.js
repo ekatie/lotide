@@ -17,3 +17,5 @@ const takeUntil = function(inputArray, condition) {
   }
   return slicedArray;
 };
+
+module.exports = takeUntil;
