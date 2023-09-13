@@ -1,6 +1,3 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
 /**
  * This function takes in an array and flattens (combines) any nested arrays, returning an array without nested arrays. Single array deep only.
  * @param {array} inputArray 
