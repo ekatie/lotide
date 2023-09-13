@@ -1,5 +1,5 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
+// const eqArrays = require('./eqArrays');
+// const assertArraysEqual = require('./assertArraysEqual');
 
 /**
  * This function will return all the indices (zero-based positions) in the string where each character is found.
@@ -24,8 +24,3 @@ const letterPositions = function(sentence) {
 };
 
 module.exports = letterPositions;
-
-// test code
-// console.log(letterPositions("lighthouse in the house"))
-// assertArraysEqual(letterPositions("hello").e, [1]);
-// assertArraysEqual(letterPositions("hello").l, [2, 3]);
