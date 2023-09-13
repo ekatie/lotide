@@ -1,3 +1,6 @@
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
+
 /**
  * This code was refactored and reviewed by @TheOriginalArab, @Hands-on-robotics, & @ekatie.
  * This function takes in an array and a callback function and outputs a new array created with the callback function.
@@ -13,6 +16,8 @@ const map = function(array, callback) {
   }
   return results;
 };
+
+module.exports = map;
 
 /*
 //Test case 1: Map to first letter
