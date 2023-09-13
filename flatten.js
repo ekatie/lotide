@@ -1,21 +1,5 @@
-const eqArrays = function(arrayOne, arrayTwo) {
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    } else {
-      continue;
-    }
-  }
-  return true;
-};
-
-const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
-  if (eqArrays(inputArrayOne, inputArrayTwo) === false) {
-    console.log("The input arrays do not match.");
-  } else if (eqArrays(inputArrayOne, inputArrayTwo) === true) {
-    console.log("The input arrays match.");
-  }
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
 /**
  * This function takes in an array and flattens (combines) any nested arrays, returning an array without nested arrays. Single array deep only.
@@ -26,6 +10,8 @@ const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
 const flatten = function(inputArray) {
   return inputArray.flat();
 };
+
+module.exports = flatten;
 
 // test
 // assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]), [1, 2, 3, 4, 5, 6]);
