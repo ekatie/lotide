@@ -1,21 +1,12 @@
-const eqArrays = function(arrayOne, arrayTwo) {
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    } else {
-      continue;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
+const assertArraysEqual = require('./assertArraysEqual');
 
-const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
-  if (eqArrays(inputArrayOne, inputArrayTwo) === false) {
-    console.log("The input arrays do not match.");
-  } else if (eqArrays(inputArrayOne, inputArrayTwo) === true) {
-    console.log("The input arrays match.");
-  }
-};
+/**
+ * This function takes in two arrays and removes the values in array 2 from array 1.
+ * @param {array} source - Array to modify
+ * @param {array} itemsToRemove - Array with values to remove from source array
+ * @returns - A new array with the values remaining in the source array after the indicated values have been removed.
+ */
 
 const without = function(source, itemsToRemove) {
   let editedSource = [];
@@ -34,10 +25,11 @@ const without = function(source, itemsToRemove) {
   return editedSource;
 };
 
-assertArraysEqual(without([1, 2, "3"], [1]), [2, "3"]);
+module.exports = without;
 
 // tests
 // let sourceArray = [1, 2, 3];
 // let itemsToRemoveArray = [2];
 
 // assertArraysEqual(without(sourceArray, itemsToRemoveArray));
+// assertArraysEqual(without([1, 2, "3"], [1]), [2, "3"]);
