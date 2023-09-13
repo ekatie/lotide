@@ -1,10 +1,18 @@
 const eqObjects = require('../eqObjects');
 const assert = require('chai').assert;
 
-// test arrays - convert to mocha
-// const multiColorShirtObject = {colors: ["red", "blue"], size: "medium"};
-// const anotherMultiColorShirtObject = {size: "medium", colors: ["red", "blue"]};
-// assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true); // => true
+describe("#eqObjects", () => {
 
-// const longSleeveMultiColorShirtObject = {size: "medium", colors: ["red", "blue"], sleeveLength: "long"};
-// assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false); // => false
+  it("returns true if the keys and values of the two input objects match", () => {
+    const multiColorShirtObject = {colors: ["red", "blue"], size: "medium"};
+    const anotherMultiColorShirtObject = {size: "medium", colors: ["red", "blue"]};
+    assert.deepEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true);
+  });
+
+  it("retuns false if the keys and values of the two input objects do not match", () => {
+    const multiColorShirtObject = {colors: ["red", "blue"], size: "medium"};
+    const longSleeveMultiColorShirtObject = {size: "medium", colors: ["red", "blue"], sleeveLength: "long"};
+    assert.deepEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
+  });
+
+});
