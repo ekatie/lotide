@@ -5,7 +5,7 @@ const eqArrays = require('./eqArrays');
  * This function compares two objects and returns true if their keys and values are identical, or false if they are not.
  * @param {object} object1 - First input object to compare
  * @param {object} object2 - Second input object to compare
- * @returns True or false based on whether the input objects are identical or not.
+ * @returns - True or false based on whether the input objects are identical or not.
  */
 
 const eqObjects = function(object1, object2) {

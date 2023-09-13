@@ -1,5 +1,5 @@
 /**
- * This function takes and array and adds its values to a new array until a certain condition input using a callback function is met.
+ * This function takes an array and adds its values to a new array until a certain condition input using a callback function is met.
  * @param {array} inputArray - Array to iterate through until condition is met.
  * @param {callback function} condition - Function that calculates whether certain condition for stopping is met.
  * @returns - A new array with all the elements of the input array before the stopping condition was met.

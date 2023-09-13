@@ -1,7 +1,7 @@
 const assertEqual = require('./assertEqual');
 
 /**
- *This function should take in a sentence (as a string) and then return a count of each of the letters in that sentence.
+ * This function should take in a sentence (as a string) and then return a count of each of the letters in that sentence.
  * @param {array} string - Takes in a string to count
  * @returns {object} - Returns an object containing letter counts
  */
