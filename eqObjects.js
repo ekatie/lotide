@@ -1,3 +1,5 @@
+const eqArrays = require("./eqArrays");
+
 /**
  * This function compares two objects and returns true if their keys and values are identical, or false if they are not.
  * @param {object} object1 - First input object to compare
