@@ -12,3 +12,5 @@ const findKey = function(inputObject, condition) {
     }
   }
 };
+
+module.exports = findKey;
