@@ -1,6 +1,3 @@
-const assertEqual = require('./assertEqual');
-const eqArrays = require('./eqArrays');
-
 /**
  * This function compares two objects and returns true if their keys and values are identical, or false if they are not.
  * @param {object} object1 - First input object to compare
@@ -31,11 +28,3 @@ const eqObjects = function(object1, object2) {
 };
 
 module.exports = eqObjects;
-
-// test arrays
-// const multiColorShirtObject = {colors: ["red", "blue"], size: "medium"};
-// const anotherMultiColorShirtObject = {size: "medium", colors: ["red", "blue"]};
-// assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true); // => true
-
-// const longSleeveMultiColorShirtObject = {size: "medium", colors: ["red", "blue"], sleeveLength: "long"};
-// assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false); // => false
