@@ -1,6 +1,3 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
 /**
  * This function takes in an array and returns it's middle value(s) - a single value if the length is odd, or two if the length is even.
  * @param {array} inputArray - Input array.
