@@ -6,13 +6,25 @@
  */
 
 const eqArrays = function(arrayOne, arrayTwo) {
-  for (let i = 0; i < arrayOne.length; i++) {
-    if (arrayOne[i] !== arrayTwo[i]) {
-      return false;
-    } else {
-      continue;
-    }
+
+  if (arrayOne.length != arrayTwo.length) {
+    return false;
   }
+
+  // Loop through arrays and check if elements match
+  for (let i = 0; i < arrayOne.length; i++) {
+
+    // If there are nested arrays
+    if (Array.isArray(arrayOne[i]) && Array.isArray(arrayTwo[i])) {
+      if (!eqArrays(arrayOne[i], arrayTwo[i])) {
+        return false;
+      }
+
+      // Otherwise compare element values
+    } else if (arrayOne[i] !== arrayTwo[i]) {
+      return false;
+    }
+  };
   return true;
 };
 
