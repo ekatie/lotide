@@ -15,4 +15,20 @@ describe("#eqObjects", () => {
     assert.deepEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
   });
 
+  it("returns true if there are nested objects that match", () => {
+    assert.deepEqual(eqObjects({a: {z: 1}, b: 2}, {a: {z: 1}, b: 2}), true);
+  });
+
+  it("returns true if there are multiple levels of nested objects that match", () => {
+    assert.deepEqual(eqObjects({a: {z: 1, c: 3, d: {da: 0, db: 2, dc: {dca: 1}}}, b: 2}, {a: {z: 1, c: 3, d: {da: 0, db: 2, dc: {dca: 1}}}, b: 2}), true);
+  });
+
+  it("returns false if there are nested objects that do not match", () => {
+    assert.deepEqual(eqObjects({a: {y: 0, z: 1}, b: 2}, {a: {z: 1}, b: 2}), false);
+  });
+
+  it("returns false if there are nested objects that do not match", () => {
+    assert.deepEqual(eqObjects({a: {y: 0, z: 1}, b: 2}, {a: 1, b: 2}), false);
+  });
+
 });
