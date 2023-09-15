@@ -13,17 +13,23 @@ const eqObjects = function(object1, object2) {
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
   }
-  // Compare key values for each object, both for arrays and not arrays
+
+  // Compare key values for each object
   for (const key in object1) {
 
+    // If arrays
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       if (!eqArrays(object1[key], object2[key])) {
         return false;
       }
+
+      // If objects
     } else if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
       if (!eqObjects(object1[key], object2[key])) {
         return false;
       }
+
+      // Otherwise
     } else if (object1[key] !== object2[key]) {
       return false;
     }
