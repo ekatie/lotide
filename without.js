@@ -1,6 +1,3 @@
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
 /**
  * This function takes in two arrays and removes the values in array 2 from array 1.
  * @param {array} source - Array to modify
@@ -26,10 +23,3 @@ const without = function(source, itemsToRemove) {
 };
 
 module.exports = without;
-
-// tests
-// let sourceArray = [1, 2, 3];
-// let itemsToRemoveArray = [2];
-
-// assertArraysEqual(without(sourceArray, itemsToRemoveArray));
-// assertArraysEqual(without([1, 2, "3"], [1]), [2, "3"]);
