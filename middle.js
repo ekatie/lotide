@@ -11,7 +11,7 @@ const middle = function(inputArray) {
     return middleValues;
   } else if (inputArray.length % 2 === 1) {
     middleValues.push(inputArray[(inputArray.length - 1) / 2]);
-  } else if (inputArray.length % 2 === 0) {
+  } else {
     middleValues.push(...inputArray.slice((inputArray.length / 2) - 1, (inputArray.length / 2) + 1));
   }
   return middleValues;
