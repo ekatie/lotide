@@ -5,10 +5,12 @@ const eqArrays = require('./eqArrays');
  * @param {array} inputArrayOne - First array to compare
  * @param {array} inputArrayTwo - Second array to compare
  * Print out results of comparison - whether the arrays match or not.
- */const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
+ */
+
+const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
   if (eqArrays(inputArrayOne, inputArrayTwo) === false) {
     console.log("The input arrays do not match.");
-  } else if (eqArrays(inputArrayOne, inputArrayTwo) === true) {
+  } else {
     console.log("The input arrays match.");
   }
 };
