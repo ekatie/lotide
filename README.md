@@ -37,7 +37,7 @@ The following functions are currently implemented:
   * `eqArrays`: This function compares 2 arrays are returns true or false based on whether there is a perfect match.
   * `eqObjects`: This function compares two objects and returns true if their keys and values are identical, or false if they are not.
   * `findKey`: This function takes in an object and a callback function and returns the key of the value that matches the callback function condition.
-  * `findKeyValue`: This function takes in an object and a value, then searches the object for the key of the indicated value.
+  * `findKeyByValue`: This function takes in an object and a value, then searches the object for the key of the indicated value.
   * `flatten`: This function takes in an array and flattens (combines) any nested arrays, returning an array without nested arrays.
   * `letterPositions`: This function will return all the indices (zero-based positions) in the string where each character is found.
   * `map`: This function takes in an array and a callback function and outputs a new array created with the callback function.
