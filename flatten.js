@@ -5,22 +5,17 @@
  */
 
 const flatten = function(inputArray) {
-  return inputArray.flat();
-};
-
-module.exports = flatten;
-
-/*code without using flat method:
-const flatten = function(inputArray) {
   let outputArray = [];
 
   for (let i = 0; i < inputArray.length; i++) {
     if (Array.isArray(inputArray[i]) === true) {
       outputArray.push(...inputArray[i]);
     }
-    else if (Array.isArray(inputArray[i]) !== true) {
+    else {
       outputArray.push(inputArray[i]);
     }
   }
   return outputArray;
-}; */
+};
+
+module.exports = flatten;
