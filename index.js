@@ -9,7 +9,7 @@ const countOnly = require('./countOnly');
 const eqArrays = require('./eqArrays');
 const eqObjects = require('./eqObjects');
 const findKey = require('./findKey');
-const findKeyValue = require('./findKeyValue');
+const findKeyByValue = require('./findKeyByValue');
 const flatten = require('./flatten');
 const letterPositions = require('./letterPositions');
 const map = require('./map');
@@ -28,7 +28,7 @@ module.exports = {
   eqArrays,
   eqObjects,
   findKey,
-  findKeyValue,
+  findKeyByValue,
   flatten,
   letterPositions,
   map,
