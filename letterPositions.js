@@ -12,7 +12,7 @@ const letterPositions = function(sentence) {
     if (char !== " ") {
       if (!results[char]) {
         results[char] = [index];
-      } else if (results[char]) {
+      } else {
         results[char].push(index);
       }
     }
