@@ -1,0 +1,26 @@
+{
+  "name": "@ekatie/lotide",
+  "version": "1.0.2",
+  "description": "A mini clone of the [Lodash](https://lodash.com) library, created as part of the author's learnings at Lighthouse Labs",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekatie/lotide.git"
+  },
+  "author": "Katie Kucsera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekatie/lotide/issues"
+  },
+  "homepage": "https://github.com/ekatie/lotide#readme",
+  "devDependencies": {
+    "chai": "^4.3.8",
+    "mocha": "^9.2.2"
+  }
+}
