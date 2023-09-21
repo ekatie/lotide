@@ -8,7 +8,7 @@ const eqArrays = require('./eqArrays');
  */
 
 const assertArraysEqual = function(inputArrayOne, inputArrayTwo) {
-  if (eqArrays(inputArrayOne, inputArrayTwo) === false) {
+  if (!eqArrays(inputArrayOne, inputArrayTwo)) {
     console.log("The input arrays do not match.");
   } else {
     console.log("The input arrays match.");
