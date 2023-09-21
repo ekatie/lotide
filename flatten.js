@@ -9,7 +9,7 @@ const flatten = function(inputArray) {
 
   for (let i = 0; i < inputArray.length; i++) {
     if (Array.isArray(inputArray[i])) {
-      outputArray.push(...inputArray[i]);
+      outputArray = outputArray.concat(flatten(inputArray[i]));
     }
     else {
       outputArray.push(inputArray[i]);
