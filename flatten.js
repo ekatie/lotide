@@ -8,7 +8,7 @@ const flatten = function(inputArray) {
   let outputArray = [];
 
   for (let i = 0; i < inputArray.length; i++) {
-    if (Array.isArray(inputArray[i]) === true) {
+    if (Array.isArray(inputArray[i])) {
       outputArray.push(...inputArray[i]);
     }
     else {
